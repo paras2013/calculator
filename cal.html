@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> Calculator </h1>
+
+        <table>
+
+            <tr>
+                <td><input type="text" id="calculations"/></td>       
+            </tr>
+
+            <tr>               
+                <td><input type="button" value="1" onclick="dis_result('1')"/></td>
+                <td><input type="button" value="2" onclick="dis_result('2')"/></td>
+                <td><input type="button" value="3" onclick="dis_result('3')"/></td>
+                <td><input type="button" value="+" onclick="dis_result('+')"/></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="4" onclick="dis_result('4')"/></td>
+                <td><input type="button" value="5" onclick="dis_result('5')"/></td>
+                <td><input type="button" value="6" onclick="dis_result('6')"/></td>
+                <td><input type="button" value="-" onclick="dis_result('-')"/></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="7" onclick="dis_result('7')"/></td>
+                <td><input type="button" value="8" onclick="dis_result('8')"/></td>
+                <td><input type="button" value="9" onclick="dis_result('9')"/></td>
+                <td><input type="button" value="/" onclick="dis_result('/')"/></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="0" onclick="dis_result('0')"/> </td>
+                <td><input type="button" value="." onclick="dis_result('.')"/> </td>                
+                <td><input type="button" value="*" onclick="dis_result('*')"/> </td>
+                <td><input type="button" value="=" onclick="operation()"/> </td>
+            </tr>
+
+        </table>
+      <script>    
+          function dis_result(get_val){
+    document.getElementById("calculations").value+=get_val;
+
+     } 
+     
+       function operation(){
+            var a=document.getElementById("calculations").value;   
+           b=eval(a);      
+          document.getElementById("calculations").value=b;
+       } 
+</script>
+
+</body>
+</html>
