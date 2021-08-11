@@ -1,4 +1,5 @@
 function ins(num) {
+    //
     document.getElementById("calc").value = document.getElementById("calc").value + num;
 }
 function equal() {
